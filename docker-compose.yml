@@ -1,0 +1,30 @@
+version: "3.4"
+services:
+  cena:
+    build:
+      context: ./
+      target: production
+      dockerfile: Dockerfile
+    container_name: cena
+    restart: always
+    depends_on:
+      - "postgres"
+    ports:
+      - 9090:80
+    environment:
+      DB_ENGINE: postgres # Optional: 'sqlite', 'postgres'
+      POSTGRES_USER: cena
+      POSTGRES_PASSWORD: cena
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: cena
+      # WORKERS_PER_CORE: 0.5
+      # MAX_WORKERS: 8
+      # WEB_CONCURRENCY: 2
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: cena
+      POSTGRES_USER: cena

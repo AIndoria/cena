@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "vue-loader-v16": "npm:vue-loader@^16.8.3"
+  }
+}

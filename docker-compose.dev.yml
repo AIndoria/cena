@@ -1,0 +1,45 @@
+# Use changeme@email.com/MyPassword as user/password credentials
+version: "3.1"
+services:
+  # Vue Frontend
+  cena-frontend:
+    container_name: cena-frontend
+    image: cena-frontend:dev
+    build:
+      context: ./frontend
+      dockerfile: frontend.Dockerfile
+    restart: always
+    ports:
+      - 9920:8080
+    environment:
+      VUE_APP_API_BASE_URL: "http://cena-api:9000"
+    volumes:
+      - ./frontend/:/app
+      - /app/node_modules
+
+  # Fast API
+  cena-api:
+    container_name: cena-api
+    image: cena-api:dev
+    build:
+      context: ./
+      target: development
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 9921:9000
+    environment:
+      TZ: America/Anchorage # Specify Correct Timezone for Date/Time to line up correctly.
+    volumes:
+      - ./dev/data:/app/dev/data
+      - ./cena:/app/cena
+
+  # Mkdocs
+  cena-docs:
+    container_name: cena-docs
+    image: squidfunk/mkdocs-material
+    restart: always
+    ports:
+      - 9922:8000
+    volumes:
+      - ./docs:/docs
