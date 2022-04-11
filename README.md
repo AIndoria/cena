@@ -1,15 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Docker Pulls][docker-pull]][docker-pull]
-[![CodeFactor](https://www.codefactor.io/repository/github/aindoria/cena/badge)](https://www.codefactor.io/repository/github/aindoria/cena)
-[![Docker Build Production](https://github.com/aindoria/cena/actions/workflows/dockerbuild.release.yml/badge.svg)](https://github.com/aindoria/cena/actions/workflows/dockerbuild.release.yml)
-[![Project Tests Production](https://github.com/aindoria/cena/actions/workflows/test-all.yml/badge.svg)](https://github.com/aindoria/cena/actions/workflows/test-all.yml)
-[![Docker Build Dev](https://github.com/aindoria/cena/actions/workflows/dockerbuild.dev.yml/badge.svg?branch=dev)](https://github.com/aindoria/cena/actions/workflows/dockerbuild.dev.yml)
-[![Project Tests Dev](https://github.com/aindoria/cena/actions/workflows/test-all.yml/badge.svg?branch=dev)](https://github.com/aindoria/cena/actions/workflows/test-all.yml)
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
