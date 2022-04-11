@@ -12,21 +12,7 @@
   <p align="center">
     A Place for All Your Recipes
     <br />
-    <a href="https://hay-kot.github.io/cena/"><strong>Explore the docs »</strong></a>
-  <a href="https://github.com/hay-kot/cena">
-  </a>
-    <br />
-    <a href="https://cena-demo.hay-kot.dev/">View Demo</a>
-    ·
-    <a href="https://github.com/hay-kot/cena/issues">Report Bug</a>    
-    ·
-    <a href="https://hay-kot.github.io/cena/api/redoc/">API</a>
-    ·
-    <a href="https://github.com/hay-kot/cena/issues">
-    Request Feature
-    </a>    
-    ·
-    <a href="https://hub.docker.com/r/hkotel/cena"> Docker Hub
+    <a href="https://hub.docker.com/r/aindoria/cena"> Docker Hub
     </a>
 </p>
 
@@ -34,9 +20,8 @@
 
 # About The Project
 
-Cena is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and Cena will automatically import the relevant data or add a family recipe with the UI editor. Cena also provides an API for interactions from 3rd party applications.
+Cena is a fork of Mealie customized for the Civitates network. It is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and Cena will automatically import the relevant data or add a family recipe with the UI editor. Cena also provides an API for interactions from 3rd party applications.
 
-[Remember to join the Discord](https://discord.gg/QuStdQGSGK)!
 
 ## Key Features
 
@@ -106,17 +91,5 @@ Thanks to Linode for providing Hosting for the Demo, Beta, and Documentation sit
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/hay-kot/cena.svg?style=flat-square
-[docker-pull]: https://img.shields.io/docker/pulls/hkotel/cena
-[contributors-url]: https://github.com/hay-kot/cena/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/hay-kot/cena.svg?style=flat-square
-[forks-url]: https://github.com/hay-kot/cena/network/members
-[stars-shield]: https://img.shields.io/github/stars/hay-kot/cena.svg?style=flat-square
-[stars-url]: https://github.com/hay-kot/cena/stargazers
-[issues-shield]: https://img.shields.io/github/issues/hay-kot/cena.svg?style=flat-square
-[issues-url]: https://github.com/hay-kot/cena/issues
-[license-shield]: https://img.shields.io/github/license/hay-kot/cena.svg?style=flat-square
-[license-url]: https://github.com/hay-kot/cena/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/hay-kot
-[product-screenshot]: docs/docs/assets/img/home_screenshot.png
+[license-shield]: https://img.shields.io/github/license/aindoria/cena.svg?style=flat-square
+[license-url]: https://github.com/aindoria/cena/blob/master/LICENSE.txt
