@@ -62,29 +62,12 @@ As to why we need a database?
 - **Developer Experience:** Without a database a lot of the work to maintain your data is taken on by the developer instead of a battle tested platform for storing data.
 - **Multi User Support:** With a solid database as backend storage for your data Cena can better support multi-user sites and avoid read/write access errors when multiple actions are taken at the same time.
 
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Especially test. Literally any tests. See the [Contributors Guide](https://hay-kot.github.io/cena/contributors/non-coders/) for help getting started.
-
-If you are not a coder, you can still contribute financially. financial contributions help me prioritize working on this project over others and helps me know that there is a real demand for project development.
-
 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Sponsors
 
-Huge thanks to all the sponsors of this project on [Github Sponsors](https://github.com/sponsors/hay-kot) and Buy Me a Coffee. Without you this project would surely not be possible.
-
-Thanks to Linode for providing Hosting for the Demo, Beta, and Documentation sites! Another big thanks to JetBrains for providing their IDEs for development.
-
-<div align='center'>
-  <img height="200" src="docs/docs/assets/img/sponsors-linode.svg" />
-  <img height="200" src="docs/docs/assets/img/sponsors-jetbrains.png" />
-</div>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
