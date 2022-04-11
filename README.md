@@ -16,7 +16,6 @@
     </a>
 </p>
 
-![Product Name Screen Shot][product-screenshot]
 
 # About The Project
 
