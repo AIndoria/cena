@@ -1,0 +1,103 @@
+[tool.poetry]
+name = "cena"
+version = "1.0.0b"
+description = "A Recipe Manager"
+authors = ["Abe <aindoria@pm.me>"]
+license = "MIT"
+
+[tool.poetry.scripts]
+start = "cena.app:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiofiles = "0.5.0"
+aniso8601 = "7.0.0"
+appdirs = "1.4.4"
+fastapi = "^0.75.1"
+uvicorn = {extras = ["standard"], version = "^0.13.0"}
+SQLAlchemy = "^1.4.29"
+alembic = "^1.7.5"
+Jinja2 = "^2.11.2"
+python-dotenv = "^0.15.0"
+python-slugify = "^4.0.1"
+requests = "^2.25.1"
+PyYAML = "^5.3.1"
+extruct = "^0.13.0"
+python-multipart = "^0.0.5"
+bcrypt = "^3.2.0"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+lxml = "^4.7.1"
+Pillow = "^8.2.0"
+apprise = "^0.9.6"
+recipe-scrapers = "^13.28.0"
+psycopg2-binary = {version = "^2.9.1", optional = true}
+gunicorn = "^20.1.0"
+emails = "^0.6"
+python-ldap = "^3.3.1"
+pydantic = "^1.9.0"
+tzdata = "^2021.5"
+pyhumps = "^3.5.3"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
+pytest = "^6.2.1"
+pytest-cov = "^2.11.0"
+mkdocs-material = "^8.2.3"
+flake8 = "^4.0.1"
+coverage = "^5.5"
+pydantic-to-typescript = "^1.0.7"
+rich = "^10.7.0"
+isort = "^5.9.3"
+flake8-print = "^4.0.0"
+black = "^21.12b0"
+coveragepy-lcov = "^0.1.1"
+mypy = "^0.940"
+types-python-slugify = "^5.0.3"
+types-PyYAML = "^6.0.4"
+types-requests = "^2.27.12"
+types-urllib3 = "^1.26.11"
+pre-commit = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.vulture]
+exclude = ["**/models/**/*.py", "dir/"]
+ignore_decorators = ["@*router.*", "@app.on_event", "@validator", "@controller"]
+make_whitelist = true
+min_confidence = 60
+paths = ["cena"]
+sort_by_size = true
+
+[tool.isort]
+profile = "black"
+line_length = 120
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=cena"
+python_files = 'test_*'
+python_classes = '*Tests'
+python_functions = 'test_*'
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.poetry.extras]
+pgsql = ["psycopg2-binary"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+follow_imports = "skip"
+strict_optional = false # TODO: Fix none type checks - temporary stop-gap to implement mypy

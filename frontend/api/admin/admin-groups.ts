@@ -1,0 +1,55 @@
+import { BaseCRUDAPI } from "../_base";
+import { UserOut } from "~/types/api-types/user";
+const prefix = "/api";
+
+export interface Token {
+  name: string;
+  id: number;
+  createdAt: Date;
+}
+
+export interface Preferences {
+  privateGroup: boolean;
+  firstDayOfWeek: number;
+  recipePublic: boolean;
+  recipeShowNutrition: boolean;
+  recipeShowAssets: boolean;
+  recipeLandscapeView: boolean;
+  recipeDisableComments: boolean;
+  recipeDisableAmount: boolean;
+  groupId: number;
+  id: number;
+}
+
+export interface GroupCreate {
+  name: string;
+}
+
+export interface GroupRead extends GroupCreate {
+  id: number;
+  categories: any[];
+  webhooks: any[];
+  users: UserOut[];
+  preferences: Preferences;
+}
+
+export interface AdminGroupUpdate {
+  name: string;
+  id: number;
+  preferences: Preferences;
+}
+
+const routes = {
+  adminUsers: `${prefix}/admin/groups`,
+  adminUsersId: (id: number) => `${prefix}/admin/groups/${id}`,
+};
+
+export class AdminGroupsApi extends BaseCRUDAPI<GroupRead, GroupCreate> {
+  baseRoute: string = routes.adminUsers;
+  itemRoute = routes.adminUsersId;
+
+  async updateOne(id: number, payload: AdminGroupUpdate) {
+    // TODO: This should probably be a patch request, which isn't offered by the API currently
+    return await this.requests.put<GroupRead, AdminGroupUpdate>(this.itemRoute(id), payload);
+  }
+}

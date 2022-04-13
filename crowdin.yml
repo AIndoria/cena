@@ -1,0 +1,18 @@
+preserve_hierarchy: false
+files:
+  - source: /frontend/src/locales/messages/en-US.json
+    translation: /frontend/src/locales/messages/%locale%.json
+  - source: /frontend/src/locales/dateTimeFormats/en-US.json
+    translation: /frontend/src/locales/dateTimeFormats/%locale%.json
+
+  # Backend General Messages
+  - source: /cena/lang/messages/en-US.json
+    translation: /cena/lang/messages/%locale%.json
+
+  # Resource Files
+  - source: /cena/repos/seed/resources/foods/locales/en-US.json
+    translation: /cena/repos/seed/resources/foods/locales/%locale%.json
+  - source: /cena/repos/seed/resources/units/locales/en-US.json
+    translation: /cena/repos/seed/resources/units/locales/%locale%.json
+  - source: /cena/repos/seed/resources/labels/locales/en-US.json
+    translation: /cena/repos/seed/resources/labels/locales/%locale%.json
